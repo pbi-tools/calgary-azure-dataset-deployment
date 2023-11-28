@@ -66,9 +66,9 @@
         }
       },
       "parameters": {
-        "[Version]": "1.0.0",
+        "[Version]": "1.1.0",
         "WORKSPACE": "Calgary-Demo",
-        "[SQL Schema]": "PowerBI--{{ENVIRONMENT}}--Contoso@1.0.0",
+        "[SQL Schema]": "PowerBI--{{ENVIRONMENT}}--Contoso@1.1.0",
         "SCHEMA_BASE_NAME": "PowerBI--{{ENVIRONMENT}}--Contoso",
         "[SQL Server]": "pbitools-demo-01.database.windows.net",
         "[SQL Database]": "Contoso",
