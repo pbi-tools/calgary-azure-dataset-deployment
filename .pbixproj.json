@@ -19,7 +19,7 @@
         },
         "refresh": {
           "enabled": true,
-          "skipNewDataset": false,
+          "skipNewDataset": true,
           "type": "Full",
           "objects": {
             "Date": "Automatic",
@@ -50,10 +50,7 @@
         "dataset": {
           "replaceParameters": true,
           "deployEmbeddedReport": true,
-          "gateway": {
-            "discoverGateways": true,
-            "gatewayId": "564ec649-a76b-4a47-b878-6c00c8b77b6f"
-          }
+          "setCredentials": false
         },
         "sqlScripts": {
           "enabled": true,
@@ -70,6 +67,7 @@
       },
       "parameters": {
         "[Version]": "1.0.0",
+        "WORKSPACE": "Calgary-Demo",
         "[SQL Schema]": "PowerBI--{{ENVIRONMENT}}--Contoso@1.0.0",
         "SCHEMA_BASE_NAME": "PowerBI--{{ENVIRONMENT}}--Contoso",
         "[SQL Server]": "pbitools-demo-01.database.windows.net",
@@ -82,11 +80,22 @@
       },
       "environments": {
         "Development": {
-          "workspace": "Preview-3",
+          "workspace": "{{WORKSPACE}}",
+          "displayName": "{{PBIXPROJ_FOLDER}} [DEV]",
           "refresh": {
-            "objects": {}
+            "type": "Automatic",
+            "objects": {
+              "Info": "Full"
+            }
           },
           "parameters": {}
+        },
+        "UAT": {
+          "workspace": "{{WORKSPACE}}",
+          "displayName": "{{PBIXPROJ_FOLDER}} [UAT]"
+        },
+        "Production": {
+          "workspace": "{{WORKSPACE}}"
         }
       }
     }

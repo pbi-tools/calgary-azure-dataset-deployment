@@ -1,8 +1,8 @@
-name: Deploy-DEV
+name: Deploy-UAT
 
 # Controls when the workflow will run
 on:
-  pull_request:
+  push:
     branches:
       - 'Release/*'
 
@@ -21,7 +21,7 @@ env:
 jobs:
   Deployment:
     runs-on: ubuntu-latest
-    environment: Development
+    environment: UAT
     container:
       image: ghcr.io/pbi-tools/pbi-tools-core:1.0.0-rc.6
 
@@ -36,7 +36,7 @@ jobs:
       - name: pbi-tools deploy (WhatIf)
         if: ${{ github.event.inputs.whatIf == 'true' }}
         run: |
-          /app/pbi-tools/pbi-tools.core deploy . "$PROFILE" -whatIf
+          /app/pbi-tools/pbi-tools.core deploy . "$PROFILE" UAT -whatIf
         env:
           PBI_CLIENT_SECRET: ${{ secrets.PBI_CLIENT_SECRET }}
           SQL_PWD: ${{ secrets.SQL_PWD }}
@@ -44,7 +44,7 @@ jobs:
       - name: pbi-tools deploy
         if: ${{ github.event.inputs.whatIf != 'true' }}
         run: |
-          /app/pbi-tools/pbi-tools.core deploy . "$PROFILE"
+          /app/pbi-tools/pbi-tools.core deploy . "$PROFILE" UAT
         env:
           PBI_CLIENT_SECRET: ${{ secrets.PBI_CLIENT_SECRET }}
           SQL_PWD: ${{ secrets.SQL_PWD }}
