@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 1370.2741170268844,
-            "y": 350.77677033913204
+            "y": 399.08747144614313
           },
           "nodeIndex": "Currency Exchange",
           "size": {
@@ -23,7 +23,7 @@
         {
           "location": {
             "x": 349.19876998769985,
-            "y": 96.621402214022169
+            "y": 144.93210332103325
           },
           "nodeIndex": "Customers",
           "size": {
@@ -35,7 +35,7 @@
         {
           "location": {
             "x": 1335.8858548585488,
-            "y": 677.74268142681433
+            "y": 726.05338253382547
           },
           "nodeIndex": "Date",
           "size": {
@@ -47,7 +47,7 @@
         {
           "location": {
             "x": 1022.2622386223862,
-            "y": 124.16051660516609
+            "y": 172.47121771217718
           },
           "nodeIndex": "Products",
           "size": {
@@ -59,7 +59,7 @@
         {
           "location": {
             "x": 404.89755754700406,
-            "y": 640.15238458542592
+            "y": 688.46308569243706
           },
           "nodeIndex": "Sales",
           "size": {
@@ -71,7 +71,7 @@
         {
           "location": {
             "x": 688.1938499384994,
-            "y": 98.327183271832723
+            "y": 146.63788437884381
           },
           "nodeIndex": "Stores",
           "size": {
@@ -79,13 +79,27 @@
             "width": 234
           },
           "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1305.0753470391846,
+            "y": 377.076192292713
+          },
+          "nodeIndex": "Info",
+          "nodeLineageTag": "70da6bba-5162-4cb4-8a19-07dcea31c08b",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
       "zoomValue": 70,
       "pinKeyFieldsToTop": true,
       "showExtraHeaderInfo": true,
-      "hideKeyFieldsWhenCollapsed": false
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
     }
   ],
   "selectedDiagram": "All tables",

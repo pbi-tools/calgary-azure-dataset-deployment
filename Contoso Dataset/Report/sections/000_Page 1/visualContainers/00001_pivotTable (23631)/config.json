@@ -1,0 +1,141 @@
+{
+  "name": "23631f731501e86bd842",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 32.097264437689972,
+        "y": 332.64437689969606,
+        "z": 1,
+        "width": 371.55015197568389,
+        "height": 231.48936170212767,
+        "tabOrder": 1
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pivotTable",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Info.Branch"
+        },
+        {
+          "queryRef": "Info.Data Updated (UTC)"
+        },
+        {
+          "queryRef": "Info.Dataset Version"
+        },
+        {
+          "queryRef": "Info.Environment"
+        },
+        {
+          "queryRef": "Info.GitHub RunID"
+        },
+        {
+          "queryRef": "Info.GitHub SHA"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "i",
+          "Entity": "Info",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "Branch"
+          },
+          "Name": "Info.Branch",
+          "NativeReferenceName": "Branch"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "Data Updated (UTC)"
+          },
+          "Name": "Info.Data Updated (UTC)",
+          "NativeReferenceName": "Data Updated (UTC)"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "Dataset Version"
+          },
+          "Name": "Info.Dataset Version",
+          "NativeReferenceName": "Dataset Version"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "Environment"
+          },
+          "Name": "Info.Environment",
+          "NativeReferenceName": "Environment"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "GitHub RunID"
+          },
+          "Name": "Info.GitHub RunID",
+          "NativeReferenceName": "GitHub RunID"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "GitHub SHA"
+          },
+          "Name": "Info.GitHub SHA",
+          "NativeReferenceName": "GitHub SHA"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
